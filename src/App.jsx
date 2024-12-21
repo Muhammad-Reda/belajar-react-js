@@ -1,35 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import {
+    Click,
+    Form,
+    Propagation,
+} from './components/responding-to-events/events';
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        alert('Form Submitted');
+    };
+    return (
+        <>
+            <div className="h-screen flex justify-center  items-center flex-col gap-2">
+                <Click onClick={() => alert('Click Button')}>
+                    Click Button
+                </Click>
+                <Form onSubmit={handleSubmit}>Send</Form>
+                <Propagation />
+            </div>
+        </>
+    );
 }
 
-export default App
+export default App;
