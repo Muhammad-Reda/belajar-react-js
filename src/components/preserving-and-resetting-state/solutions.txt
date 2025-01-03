@@ -1,0 +1,1 @@
+Most solutions use the key prop to fix the bugs. This is because most problems need to specify each component to tell React which component has changed.
