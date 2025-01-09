@@ -9,12 +9,13 @@ import Reverse from './components/preserving-and-resetting-state/Reverse';
 import ContactManager from './components/preserving-and-resetting-state/ContactManager';
 import Gallery from './components/preserving-and-resetting-state/Gallery';
 import Contacs from './components/preserving-and-resetting-state/Contacs';
+import Reducer from '@/components/extacting-a-state-logic-into-a-reducer/Messenger';
 
 function App() {
     return (
         <>
             <div className="h-screen flex justify-center items-center flex-col gap-4">
-                <Contacs />
+                <Reducer />
             </div>
         </>
     );
