@@ -10,13 +10,14 @@ import ContactManager from './components/preserving-and-resetting-state/ContactM
 import Gallery from './components/preserving-and-resetting-state/Gallery';
 import Contacs from './components/preserving-and-resetting-state/Contacs';
 import Reducer from '@/components/extacting-a-state-logic-into-a-reducer/Messenger';
+import ContextApp from './components/passing-data-deeply-with-context/ContextApp';
 
 function App() {
     return (
         <>
-            <div className="h-screen flex justify-center items-center flex-col gap-4">
-                <Reducer />
-            </div>
+            {/* <div className="h-screen flex justify-center items-center flex-col gap-4"> */}
+            <ContextApp />
+            {/* </div> */}
         </>
     );
 }
