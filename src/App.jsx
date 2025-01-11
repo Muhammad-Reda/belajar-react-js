@@ -12,13 +12,14 @@ import Contacs from './components/preserving-and-resetting-state/Contacs';
 import Reducer from '@/components/extacting-a-state-logic-into-a-reducer/Messenger';
 import ContextApp from './components/passing-data-deeply-with-context/ContextApp';
 import TodoApp from './components/todo-list/TodoApp';
+import Todo from './components/todo-scratch/App';
 
 function App() {
     return (
         <>
-            <div className="h-screen flex justify-center items-center flex-col gap-4">
-                <TodoApp />
-            </div>
+            {/* <div className="h-screen flex justify-center items-center flex-col gap-4"> */}
+            <Todo />
+            {/* </div> */}
         </>
     );
 }
