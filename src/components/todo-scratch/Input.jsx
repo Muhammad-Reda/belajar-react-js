@@ -1,7 +1,8 @@
 import { useTasksDispatch } from './Context';
 import { useState } from 'react';
+import { flushSync } from 'react-dom';
 
-const Input = () => {
+const Input = ({ refCallback }) => {
     const [text, setText] = useState('');
 
     const dispatch = useTasksDispatch();
@@ -23,11 +24,14 @@ const Input = () => {
                         if (text.length <= 0) {
                             return alert('Please enter the task');
                         }
-                        setText('');
-                        dispatch({
-                            type: 'add',
-                            text,
+                        flushSync(() => {
+                            setText('');
+                            dispatch({
+                                type: 'add',
+                                text,
+                            });
                         });
+                        refCallback('lastChild');
                     }}
                 >
                     Save
